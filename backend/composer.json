@@ -1,0 +1,12 @@
+{
+    "name": "fog/vpn",
+    "autoload": {
+        "psr-4": {
+            "Fog\\Vpn\\": "/"
+        }
+    },
+    "require": {
+        "mikecao/flight": "^3.17",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

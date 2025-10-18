@@ -1,0 +1,31 @@
+{
+  "log": { "access": "/var/log/xray/access.log", "error": "/var/log/xray/error.log", "loglevel": "info" },
+  "api": {
+    "tag": "api",
+    "listen": "0.0.0.0:10085",
+    "services": ["HandlerService","LoggerService","StatsService","ReflectionService"]
+  },
+  "inbounds": [
+    {
+      "tag": "vless",
+      "port": 443,
+      "protocol": "vless",
+      "settings": { "clients": [], "decryption": "none" },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "chrome",
+          "dest": "${XRAY_SNI}:443",
+          "serverNames": ["${XRAY_SNI}"],
+          "privateKey": "${XRAY_PRIV}",
+          "shortIds": ["${XRAY_SHORT_ID}"]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    { "protocol": "freedom", "tag": "direct" },
+    { "protocol": "blackhole", "tag": "blocked" }
+  ]
+}

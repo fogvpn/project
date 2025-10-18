@@ -1,0 +1,42 @@
+services:
+  xray:
+    build: ./xray
+    container_name: xray
+    ports:
+      - "443:443/tcp"
+      - "10085:10085/tcp"
+    volumes:
+      - ./xray/users.json:/etc/xray/users.json
+    environment:
+      XRAY_PRIV: ""
+      XRAY_PBK: ""
+      XRAY_SHORT_ID: ""
+      XRAY_SNI: ""
+    networks:
+      - vpn-net
+    restart: unless-stopped
+
+  php-api:
+    build: ./php-api
+    container_name: php-api
+    depends_on:
+      - xray
+    ports:
+      - "8080:80"
+    volumes:
+      - ./php-api:/var/www/html
+      - ./xray/users.json:/etc/xray/users.json
+    environment:
+      API_KEY: ""
+      XRAY_SERVER_INTERNAL: "xray"
+      XRAY_SERVER_PUBLIC: ""
+      XRAY_PBK: ""
+      XRAY_SHORT_ID: ""
+      XRAY_SNI: ""
+    networks:
+      - vpn-net
+    restart: unless-stopped
+
+networks:
+  vpn-net:
+    driver: bridge

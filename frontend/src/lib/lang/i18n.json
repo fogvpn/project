@@ -1,0 +1,148 @@
+{
+    "en": {
+        "login": "Login",
+        "register": "Register",
+        "home": "Home",
+        "about": "About",
+        "connect": "Connect",
+        "pricing": "Pricing",
+        "slogan": "Stay connected, even under strict restrictions. With open source code and the XRay protocol, you can access any resource quickly and securely",
+        "support": "Support",
+        "faq": "Frequently Asked Questions",
+        "payments": "Payments",
+        "logout": "Logout",
+
+        "faq_q1": "How to register for the service?",
+        "faq_a1": "When you register, you'll receive a unique ID, which will serve as your login. Passwords, email addresses, and other information are not required—just the ID.",
+
+        "faq_q2": "What protocols are supported?",
+        "faq_a2": "We use XRay (VLESS-Reality). These are the most reliable and up-to-date solutions for bypassing blocking and ensuring speed.",
+        "faq_q3": "How does payment work?",
+        "faq_a3": "Payment is only available in cryptocurrency (BTC, ETH, USDT, etc.). After the transaction, the system will automatically link your ID to the selected plan.",
+        "faq_q4": "What devices does FOGVPN work on?",
+        "faq_a4": "We support Windows, macOS, Linux, Android, and iOS using official configuration apps.",
+        "faq_q5": "Connection problems. What should I do?",
+        "faq_a5": "If you're unable to obtain the link or it does not work in the recommended Xray app, please contact us via <a href='https://t.me/fogvpnsupport' target='_blank' rel='noopener noreferrer'>support chat</a> or <a href='mailto:support@fogproject.top'>email</a>. We'll respond as soon as possible.",
+
+        "pricing_free_title": "Free | $0",
+        "pricing_free_desc": "Support for all OS | 1GB of traffic per day",
+        "pricing_month_title": "Month | $5",
+        "pricing_month_desc": "Unlimited traffic | YouTube 4K, Torrent support",
+        "pricing_year_title": "Year | $50",
+        "pricing_year_desc": "15% cheaper than \"Month\"",
+
+        "privacy_protection": "FOGVPN protects your online privacy. We don’t store or share data. To connect, you only need an ID — no password or email required",
+        "open_source_security": "Our app is built on open-source principles, ensuring transparency and strong security.",
+        "encryption_location": "Protect your location with advanced encryption. FOGVPN uses XRay to run secure protocols like VLESS-Reality",
+        "torrents_streaming": "FOGVPN lets you download torrents, large files, stream videos, and play online games without restrictions — even on the free plan",
+
+        "status": "Status:",
+        "limit": "Limit:",
+        "used": "Used:",
+
+        "sum": "Amount:",
+        "date": "Date:",
+        "pay": "Pay",
+        "no_data": "No data",
+
+        "copy": "Copy",
+        "copied": "Copied!",
+        "qr": "Show QR",
+
+        "xray_intro": "XRay - is suitable for bypassing restrictions in countries with strict censorship, such as Russia and China. It provides stable connections and high security. Xray (VLESS + Reality)",
+        "xray_adv1": "1. Better Privacy – it hides your internet traffic so it looks like normal HTTPS (like browsing a website), not like VPN traffic",
+        "xray_adv2": "2. Hard to Block – even if a country or provider tries to block VPNs, Reality makes it much harder to detect and stop",
+        "xray_adv3": "3. Faster Connection – it is lighter than older protocols, so speed and latency are usually better",
+        "xray_adv4": "4. More Stable – works well even on weak or unstable networks",
+        "xray_adv5": "5. Future-proof – built on new technology that is being updated and supported",
+
+        "recommended": "Recommended apps:",
+
+        "account_id": "Your Account ID:",
+        "or": "or",
+        "submit": "Submit",
+
+        "we_prioritize": "We prioritize your privacy and do not collect personal data. <br>Below you will receive a unique identifier, which is the only key to access your account.",
+
+        "important_title": "Important:",
+        "important_1": "Store your ID securely.",
+        "important_2": "Do not share it.",
+        "important_3": "Use it to log in.",
+        "important_4": "Lost IDs cannot be recovered.",
+
+        "already_have_account": "If you already have an account ID, <a href='/login'>just log in to your account</a>"
+    },
+    "ru": {
+        "login": "Войти",
+        "register": "Регистрация",
+        "home": "Главная",
+        "about": "О нас",
+        "connect": "Подключение",
+        "pricing": "Тарифы",
+        "slogan": "Оставайся на связи даже при строгих ограничениях. С открытым исходным кодом и протоколом XRay ты можешь быстро и безопасно получить доступ к любому ресурсу",
+        "support": "Поддержка",
+        "faq": "Часто задаваемые вопросы",
+        "payments": "Платежи",
+        "logout": "Выйти",
+
+        "faq_q1": "Как зарегистрироваться в сервисе?",
+        "faq_a1": "При регистрации вы получите уникальный ID, который будет использоваться как логин. Пароль, email и другие данные не требуются — только ID.",
+        "faq_q2": "Какие протоколы поддерживаются?",
+        "faq_a2": "Мы используем XRay (VLESS-Reality). Это самые надежные и современные решения для обхода блокировок и обеспечения скорости.",
+        "faq_q3": "Как работает оплата?",
+        "faq_a3": "Оплата доступна только в криптовалюте (BTC, ETH, USDT и др.). После транзакции система автоматически привяжет ваш ID к выбранному тарифу.",
+        "faq_q4": "На каких устройствах работает FOGVPN?",
+        "faq_a4": "Мы поддерживаем Windows, macOS, Linux, Android и iOS через официальные приложения для конфигурации.",
+        "faq_q5": "Проблемы с подключением. Что делать?",
+        "faq_a5": "Если вам не удаётся получить ссылку или она не работает в рекомендуемом приложении Xray, свяжитесь с нами через <a href='https://t.me/fogvpnsupport' target='_blank' rel='noopener noreferrer'>чат поддержки</a> или по <a href='mailto:support@fogproject.top'>электронной почте</a>. Мы ответим вам как можно скорее.",
+
+        "pricing_free_title": "Бесплатно | $0",
+        "pricing_free_desc": "Поддержка всех ОС | 1ГБ трафика в день",
+        "pricing_month_title": "Месяц | $5",
+        "pricing_month_desc": "Безлимитный трафик | YouTube 4K, поддержка торрент",
+        "pricing_year_title": "Год | $50",
+        "pricing_year_desc": "На 15% дешевле, чем \"Месяц\"",
+
+        "privacy_protection": "FOGVPN защищает вашу онлайн-приватность. Мы не храним и не передаем данные. Для подключения нужен только ID — пароль или email не требуются",
+        "open_source_security": "Наше приложение создано на принципах открытого кода, что обеспечивает прозрачность и высокую безопасность.",
+        "encryption_location": "Защитите своё местоположение с помощью передового шифрования. FOGVPN использует XRay для запуска безопасных протоколов, таких как VLESS-Reality",
+        "torrents_streaming": "FOGVPN позволяет скачивать торренты, большие файлы, смотреть видео и играть в онлайн-игры без ограничений — даже на бесплатном тарифе",
+
+        "status": "Статус:",
+        "limit": "Лимит:",
+        "used": "Использовано:",
+
+        "sum": "Сумма:",
+        "date": "Дата:",
+        "pay": "Оплатить",
+        "no_data": "Нет данных",
+
+        "copy": "Копировать",
+        "copied": "Скопировано!",
+        "qr": "Показать QR",
+
+        "xray_intro": "XRay подходит для обхода ограничений в странах с жесткой цензурой, таких как Россия и Китай. Обеспечивает стабильное соединение и высокую безопасность. XRay (VLESS + Reality)",
+        "xray_adv1": "1. Лучшая приватность – скрывает ваш интернет-трафик, чтобы он выглядел как обычный HTTPS (например, при посещении сайтов), а не как VPN-трафик",
+        "xray_adv2": "2. Трудно заблокировать – даже если страна или провайдер пытаются блокировать VPN, Reality делает это гораздо сложнее обнаружить и остановить",
+        "xray_adv3": "3. Быстрое соединение – легче старых протоколов, поэтому скорость и задержка обычно лучше",
+        "xray_adv4": "4. Стабильность – работает хорошо даже на слабых или нестабильных сетях",
+        "xray_adv5": "5. Актуальность – построен на новой технологии, которая обновляется и поддерживается",
+
+        "recommended": "Рекомендуемые приложения:",
+
+        "account_id": "Аккаунт-ID:",
+        "or": "или",
+        "submit": "Подтвердить",
+
+        "we_prioritize": "Мы ценим вашу конфиденциальность и не собираем персональные данные. <br> Ниже вы получите уникальный идентификатор, который является единственным ключом для доступа к вашей учетной записи.",
+
+        "important_title": "Важно:",
+        "important_1": "Храните ваш ID в безопасности.",
+        "important_2": "Не делитесь им.",
+        "important_3": "Используйте его для входа.",
+        "important_4": "Потерянные ID восстановлению не подлежат.",
+
+        "already_have_account": "Если у вас уже есть ID аккаунта, <a href='/login'>просто войдите в свой аккаунт</a>"
+    }
+  }
+  
