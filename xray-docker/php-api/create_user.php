@@ -37,7 +37,7 @@ $pbk = $_ENV['XRAY_PBK'] ?? '';
 $sid = $shortId;
 
 $vlessUrl = sprintf(
-    'vless://%s@%s:443?encryption=none&security=reality&fp=chrome&type=tcp&sni=%s&pbk=%s&sid=%s#%s',
+    'vless://%s@%s:443?encryption=none&security=reality&flow=xtls-rprx-vision&fp=chrome&type=tcp&sni=%s&pbk=%s&sid=%s#%s',
     $id,
     $server,
     rawurlencode($_ENV['XRAY_SNI']),
