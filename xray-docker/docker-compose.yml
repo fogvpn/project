@@ -4,7 +4,6 @@ services:
     container_name: xray
     ports:
       - "443:443/tcp"
-      - "10085:10085/tcp"
     volumes:
       - ./xray/users.json:/etc/xray/users.json
     environment:
