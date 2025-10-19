@@ -34,7 +34,7 @@ func main() {
 
     vlessAccount := &vlesspb.Account{
         Id:   *id,
-        Flow: "",
+        Flow: "xtls-rprx-vision",
     }
 
     accBytes, err := proto.Marshal(vlessAccount)
