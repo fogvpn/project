@@ -1,5 +1,5 @@
 FOGVPN - Stay connected, even under strict restrictions. With open source code and the XRay protocol, you can access any resource quickly and securely
-
+https://fogconfig.click/
 ###
 
 xray-docker install:
