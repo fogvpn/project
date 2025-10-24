@@ -11,6 +11,5 @@ require __DIR__ . '/src/flight/me.php';
 require __DIR__ . '/src/flight/payments.php';
 require __DIR__ . '/src/flight/logout.php';
 require __DIR__ . '/src/flight/config.php';
-require __DIR__ . '/src/flight/traffic.php';
 
 Flight::start();
