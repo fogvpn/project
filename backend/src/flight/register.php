@@ -88,8 +88,14 @@ Flight::route('POST /api/register', function() use ($pdo) {
         $configLink = $vpnUserId;
     
         $stmt = $pdo->prepare("
-            INSERT INTO users (uuid, plan_id, config_link) 
-            VALUES (?, (SELECT id FROM plans WHERE name='free'), ?) 
+            INSERT INTO users (uuid, plan_id, config_link, cycle_start_at, cycle_end_at)
+            VALUES (
+                ?,
+                (SELECT id FROM plans WHERE name='free'),
+                ?,
+                NOW(),
+                NOW() + INTERVAL '1 month'
+            )
             RETURNING id
         ");
         $stmt->execute([$uuid, $configLink]);
@@ -111,9 +117,9 @@ Flight::route('POST /api/register', function() use ($pdo) {
         setcookie("session_token", $sessionToken, [
             'expires' => time() + 60*60*24*30,
             'path' => '/',
-            'secure' => false,
+            'secure' => true,
             'httponly' => true,
-            'samesite' => 'Lax'
+            'samesite' => 'None'
         ]);
     
         $stmt = $pdo->prepare("
