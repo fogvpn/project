@@ -1,44 +1,57 @@
 <?php
-$USERS_FILE = '/etc/xray/users.json';
-$LOG_FILE   = '/var/log/xray/access.log';
-$API_URL    = getenv('MAIN_API_URL') ?: 'http://main-server/api/traffic';
-$API_KEY    = getenv('MAIN_API_KEY') ?: 'changeme';
+header('Content-Type: application/json; charset=utf-8');
 
-$users = json_decode(file_get_contents($USERS_FILE), true) ?: [];
-$traffic = [];
+$headers = function_exists('getallheaders') ? getallheaders() : [];
+$auth = $headers['Authorization'] ?? $headers['authorization'] ?? '';
+$expected = 'Bearer ' . ($_ENV['API_KEY'] ?? '');
 
-$handle = fopen($LOG_FILE, "r");
-if ($handle) {
-    while (($line = fgets($handle)) !== false) {
-        if (preg_match('/user-id=(\w+).*upload=(\d+).*download=(\d+)/', $line, $m)) {
-            $id = $m[1];
-            $traffic[$id] = ($traffic[$id] ?? 0) + $m[2] + $m[3];
-        }
+if ($auth !== $expected) {
+    http_response_code(403);
+    echo json_encode(['error' => 'Invalid API key']); exit;
+}
+
+$raw = file_get_contents('php://input');
+$input = json_decode($raw, true) ?: [];
+
+$vpnUserId = $input['vpn_user_id'] ?? null;
+if (!$vpnUserId) {
+    http_response_code(400);
+    echo json_encode(['error' => 'vpn_user_id is required']); exit;
+}
+
+$usersFile = '/etc/xray/users.json';
+$list = json_decode(@file_get_contents($usersFile), true) ?: [];
+
+$email = null;
+foreach ($list as $u) {
+    if (!empty($u['id']) && $u['id'] === $vpnUserId) {
+        $email = $u['email'] ?? null;
+        break;
     }
-    fclose($handle);
+}
+if (!$email) {
+    http_response_code(404);
+    echo json_encode(['error' => 'email not found for this vpn_user_id']); exit;
 }
 
-$send = [];
-foreach ($users as $u) {
-    $id = $u['id'];
-    if (isset($traffic[$id])) {
-        $send[] = [
-            'vpn_user_id' => $id,
-            'traffic_used' => $traffic[$id]
-        ];
-    }
+$serverInternal = ($_ENV['XRAY_SERVER_INTERNAL'] ?? 'xray') . ':10085';
+$cmd = sprintf(
+    '/usr/local/bin/xraystats -email %s -server %s 2>&1',
+    escapeshellarg($email),
+    escapeshellarg($serverInternal)
+);
+exec($cmd, $out, $ec);
+if ($ec !== 0) {
+    http_response_code(502);
+    echo json_encode(['error' => 'xraystats failed', 'detail' => implode("\n", $out)]);
+    exit;
 }
+$data = json_decode(implode("\n", $out), true) ?: [];
 
-if (!empty($send)) {
-    $ch = curl_init($API_URL);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Content-Type: application/json',
-        'Authorization: Bearer ' . $API_KEY
-    ]);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($send));
-    curl_setopt($ch, CURLOPT_TIMEOUT, 15);
-    $response = curl_exec($ch);
-    curl_close($ch);
-    echo "Traffic sent: " . count($send) . " users\n";
-}
+echo json_encode([
+    'email' => $email,
+    'vpn_user_id' => $vpnUserId,
+    'up_bytes' => (int)($data['UpBytes'] ?? $data['up_bytes'] ?? 0),
+    'down_bytes' => (int)($data['DownBytes'] ?? $data['down_bytes'] ?? 0),
+    'total_bytes' => (int)($data['TotalBytes'] ?? $data['total_bytes'] ?? 0)
+]);
