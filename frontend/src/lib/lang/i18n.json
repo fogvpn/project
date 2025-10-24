@@ -22,7 +22,7 @@
         "faq_q4": "What devices does FOGVPN work on?",
         "faq_a4": "We support Windows, macOS, Linux, Android, and iOS using official configuration apps.",
         "faq_q5": "Connection problems. What should I do?",
-        "faq_a5": "If you're unable to obtain the link or it does not work in the recommended Xray app, please contact us via <a href='https://t.me/fogvpnsupport' target='_blank' rel='noopener noreferrer'>support chat</a> or <a href='mailto:support@fogproject.top'>email</a>. We'll respond as soon as possible.",
+        "faq_a5": "If you're unable to obtain the link or it does not work in the recommended Xray app, please contact us via <a href='https://t.me/fogvpnsupport' target='_blank' rel='noopener noreferrer'>support chat</a> or <a href='mailto:support@fogconfig.click'>email</a>. We'll respond as soon as possible.",
 
         "pricing_free_title": "Free | $0",
         "pricing_free_desc": "Support for all OS | 1GB of traffic per day",
@@ -51,7 +51,7 @@
 
         "xray_intro": "XRay - is suitable for bypassing restrictions in countries with strict censorship, such as Russia and China. It provides stable connections and high security. Xray (VLESS + Reality)",
         "xray_adv1": "1. Better Privacy – it hides your internet traffic so it looks like normal HTTPS (like browsing a website), not like VPN traffic",
-        "xray_adv2": "2. Hard to Block – even if a country or provider tries to block VPNs, Reality makes it much harder to detect and stop",
+        "xray_adv2": "2. Hard to Block – even if a country or provider tries to block VPNs",
         "xray_adv3": "3. Faster Connection – it is lighter than older protocols, so speed and latency are usually better",
         "xray_adv4": "4. More Stable – works well even on weak or unstable networks",
         "xray_adv5": "5. Future-proof – built on new technology that is being updated and supported",
@@ -70,7 +70,103 @@
         "important_3": "Use it to log in.",
         "important_4": "Lost IDs cannot be recovered.",
 
-        "already_have_account": "If you already have an account ID, <a href='/login'>just log in to your account</a>"
+        "already_have_account": "If you already have an account ID, <a href='/login'>just log in to your account</a>",
+
+        "common": {
+            "service_name": "FOGVPN",
+            "last_updated_label": "Last updated:",
+            "contact": {
+            "title": "Contact & Support",
+            "email_label": "Email",
+            "email_value": "support@fogconfig.click",
+            "telegram_label": "Telegram",
+            "telegram_handle": "@fogvpnsupport",
+            "telegram_url": "https://t.me/fogvpnsupport"
+            }
+        },
+
+        "terms": {
+            "meta_title": "Terms of Use — FOGVPN",
+            "title": "Terms of Use",
+            "last_updated": "October 21, 2025",
+            "s1": {
+            "title": "1. About the Service",
+            "p1": "FOGVPN is an independent VPN service built to protect users’ privacy and freedom online.",
+            "p2": "We provide secure connections over the VLESS protocol, allowing you to encrypt traffic and stay anonymous on the internet."
+            },
+            "s2": {
+            "title": "2. Registration and Identifier",
+            "p1": "To connect to FOGVPN you use a unique identifier (ID) generated automatically.",
+            "p2": "This ID is used only for authentication and technical traffic accounting. You are responsible for the use of your ID and any connections made with it."
+            },
+            "s3": {
+            "title": "3. Payments and Cryptocurrency",
+            "p1": "Payments are accepted exclusively in cryptocurrency via a third-party payment gateway.",
+            "p2": "FOGVPN does not store or process data about transactions, wallets, or other payment details. All operations are handled directly by your chosen crypto provider."
+            },
+            "s4": {
+            "title": "4. Fair Use",
+            "p1": "We respect users’ freedom and expect the same toward others.",
+            "p2": "Using the VPN for illegal activity, network attacks, spam, malware distribution, or copyright infringement is not allowed.",
+            "p3": "These limits are not about censorship — they exist to keep a fair and safe ecosystem for everyone."
+            },
+            "s5": {
+            "title": "5. Service Operation and Liability",
+            "p1": "We do our best to keep FOGVPN stable, secure, and available.",
+            "p2": "However, the internet is unpredictable; temporary outages, maintenance, or restrictions by third-party networks may occur.",
+            "p3": "FOGVPN is not liable for external failures, delays, or the consequences of VPN use. The service is provided “as is,” and we continually improve it and resolve technical issues quickly.",
+            "p4": "You are responsible only for your own actions and the content you access via the VPN. We do not interfere with traffic and do not monitor activity."
+            },
+            "s6": {
+            "title": "6. Changes to the Terms",
+            "p1": "We may update these terms when the service changes or new features appear.",
+            "p2": "The current version is always available on the website and takes effect upon publication."
+            },
+            "s7": {
+            "title": "7. Contact & Support",
+            "lead": "We’re open to feedback and aim to help promptly. If you have questions, reach us here:"
+            },
+            "closing": "By using FOGVPN, you agree to these terms and acknowledge their purpose: protecting your privacy and security online."
+        },
+
+        "privacy": {
+            "meta_title": "Privacy Policy — FOGVPN",
+            "title": "Privacy Policy",
+            "last_updated": "October 21, 2025",
+            "s1": {
+            "title": "1. About This Policy",
+            "p1": "FOGVPN exists to give users freedom and security online. We value your trust and do not collect personal data unless it’s required for the service to operate."
+            },
+            "s2": {
+            "title": "2. What We Don’t Collect",
+            "p1": "We do not ask for your name, email address, phone number, or any personal details.",
+            "p2": "When creating an account you receive only a unique identifier (ID) used for authentication. This ID is not tied to your identity and does not allow us to identify you."
+            },
+            "s3": {
+            "title": "3. Payments",
+            "p1": "Payments are made in cryptocurrency via a third-party gateway.",
+            "p2": "We do not process or store payment information such as wallets, transactions, or payment history. This is handled by the provider, not FOGVPN."
+            },
+            "s4": {
+            "title": "4. Logs and Activity",
+            "p1": "We maintain a strict no-logs policy. We do not keep connection logs, IP addresses, traffic history, or other data about your activity.",
+            "p2": "We don’t know which websites you visit and cannot technically find that out."
+            },
+            "s5": {
+            "title": "5. Security and Transparency",
+            "p1": "We use modern server-security practices and traffic encryption. Still, no system can be absolutely immune to external threats.",
+            "p2": "We continually improve our infrastructure to ensure user security and privacy."
+            },
+            "s6": {
+            "title": "6. Contact & Support",
+            "lead": "If you have questions, suggestions, or concerns, our team is always available:"
+            },
+            "s7": {
+            "title": "7. Changes to This Policy",
+            "p1": "We may update this document to clarify it or reflect service changes.",
+            "p2": "The new version takes effect immediately upon publication on the website."
+            }
+        }
     },
     "ru": {
         "login": "Войти",
@@ -94,7 +190,7 @@
         "faq_q4": "На каких устройствах работает FOGVPN?",
         "faq_a4": "Мы поддерживаем Windows, macOS, Linux, Android и iOS через официальные приложения для конфигурации.",
         "faq_q5": "Проблемы с подключением. Что делать?",
-        "faq_a5": "Если вам не удаётся получить ссылку или она не работает в рекомендуемом приложении Xray, свяжитесь с нами через <a href='https://t.me/fogvpnsupport' target='_blank' rel='noopener noreferrer'>чат поддержки</a> или по <a href='mailto:support@fogproject.top'>электронной почте</a>. Мы ответим вам как можно скорее.",
+        "faq_a5": "Если вам не удаётся получить ссылку или она не работает в рекомендуемом приложении Xray, свяжитесь с нами через <a href='https://t.me/fogvpnsupport' target='_blank' rel='noopener noreferrer'>чат поддержки</a> или по <a href='mailto:support@fogconfig.click'>электронной почте</a>. Мы ответим вам как можно скорее.",
 
         "pricing_free_title": "Бесплатно | $0",
         "pricing_free_desc": "Поддержка всех ОС | 1ГБ трафика в день",
@@ -123,7 +219,7 @@
 
         "xray_intro": "XRay подходит для обхода ограничений в странах с жесткой цензурой, таких как Россия и Китай. Обеспечивает стабильное соединение и высокую безопасность. XRay (VLESS + Reality)",
         "xray_adv1": "1. Лучшая приватность – скрывает ваш интернет-трафик, чтобы он выглядел как обычный HTTPS (например, при посещении сайтов), а не как VPN-трафик",
-        "xray_adv2": "2. Трудно заблокировать – даже если страна или провайдер пытаются блокировать VPN, Reality делает это гораздо сложнее обнаружить и остановить",
+        "xray_adv2": "2. Трудно заблокировать – даже если страна или провайдер пытаются блокировать VPN",
         "xray_adv3": "3. Быстрое соединение – легче старых протоколов, поэтому скорость и задержка обычно лучше",
         "xray_adv4": "4. Стабильность – работает хорошо даже на слабых или нестабильных сетях",
         "xray_adv5": "5. Актуальность – построен на новой технологии, которая обновляется и поддерживается",
@@ -142,7 +238,103 @@
         "important_3": "Используйте его для входа.",
         "important_4": "Потерянные ID восстановлению не подлежат.",
 
-        "already_have_account": "Если у вас уже есть ID аккаунта, <a href='/login'>просто войдите в свой аккаунт</a>"
+        "already_have_account": "Если у вас уже есть ID аккаунта, <a href='/login'>просто войдите в свой аккаунт</a>",
+
+        "common": {
+            "service_name": "FOGVPN",
+            "last_updated_label": "Последнее обновление:",
+            "contact": {
+            "title": "Контакты и поддержка",
+            "email_label": "Email",
+            "email_value": "support@fogconfig.click",
+            "telegram_label": "Telegram",
+            "telegram_handle": "@fogvpnsupport",
+            "telegram_url": "https://t.me/fogvpnsupport"
+            }
+        },
+
+        "terms": {
+            "meta_title": "Условия использования — FOGVPN",
+            "title": "Условия использования",
+            "last_updated": "21 октября 2025 г.",
+            "s1": {
+            "title": "1. О сервисе",
+            "p1": "FOGVPN — это независимый VPN-сервис, созданный для защиты конфиденциальности и свободы пользователей в интернете.",
+            "p2": "Мы предоставляем защищённое соединение через протокол VLESS, позволяя шифровать трафик и сохранять анонимность онлайн."
+            },
+            "s2": {
+            "title": "2. Регистрация и идентификатор",
+            "p1": "Для подключения к сети FOGVPN используется уникальный идентификатор (ID), который создаётся автоматически.",
+            "p2": "Этот ID нужен только для авторизации и технического учёта трафика. Пользователь несёт ответственность за использование своего ID и подключений, выполненных с его помощью."
+            },
+            "s3": {
+            "title": "3. Оплата и криптовалюта",
+            "p1": "Оплата услуг осуществляется исключительно в криптовалюте через сторонний платёжный шлюз.",
+            "p2": "FOGVPN не хранит и не обрабатывает данные о транзакциях, кошельках или других платёжных реквизитах. Все операции проходят напрямую через выбранного пользователем крипто-провайдера."
+            },
+            "s4": {
+            "title": "4. Честное использование",
+            "p1": "Мы уважаем свободу пользователей и ожидаем такого же отношения к другим.",
+            "p2": "Использование VPN для противоправных действий, атак на сети, рассылки спама, вредоносных программ или нарушения авторских прав недопустимо.",
+            "p3": "Эти ограничения существуют не для цензуры, а чтобы поддерживать честную и безопасную экосистему для всех."
+            },
+            "s5": {
+            "title": "5. Работа сервиса и ответственность",
+            "p1": "Мы делаем всё возможное, чтобы FOGVPN работал стабильно, безопасно и без простоев.",
+            "p2": "Тем не менее, интернет-среда непредсказуема, и иногда возможны временные перебои, технические обновления или ограничения со стороны сторонних сетей.",
+            "p3": "FOGVPN не несёт ответственности за внешние сбои, задержки или последствия использования VPN. Мы предоставляем сервис «как есть», но всегда стремимся улучшать его и быстро решать технические вопросы.",
+            "p4": "Пользователь несёт ответственность только за собственные действия и контент, к которому получает доступ с помощью VPN. Мы не вмешиваемся в трафик и не отслеживаем активность."
+            },
+            "s6": {
+            "title": "6. Изменения условий",
+            "p1": "Мы можем обновлять эти условия, если меняется работа сервиса или появляются новые функции.",
+            "p2": "Актуальная версия всегда доступна на сайте и вступает в силу с момента публикации."
+            },
+            "s7": {
+            "title": "7. Контакты и поддержка",
+            "lead": "Наша команда открыта для обратной связи и старается оперативно помогать пользователям. Если у вас есть вопросы, вы можете связаться с нами:"
+            },
+            "closing": "Используя FOGVPN, вы соглашаетесь с этими условиями и подтверждаете, что понимаете их цель — защиту вашей конфиденциальности и безопасности в сети."
+        },
+
+        "privacy": {
+            "meta_title": "Политика конфиденциальности — FOGVPN",
+            "title": "Политика конфиденциальности",
+            "last_updated": "21 октября 2025 г.",
+            "s1": {
+            "title": "1. О нашей политике",
+            "p1": "FOGVPN создан, чтобы дать пользователям свободу и безопасность в интернете. Мы ценим ваше доверие и не собираем личные данные, если это не требуется для работы самого сервиса."
+            },
+            "s2": {
+            "title": "2. Что мы не собираем",
+            "p1": "Мы не просим у вас имя, адрес электронной почты, номер телефона или какие-либо личные данные.",
+            "p2": "При создании учётной записи вы получаете только уникальный идентификатор (ID), который используется для авторизации. Этот ID не связан с вашей личностью и не позволяет идентифицировать вас."
+            },
+            "s3": {
+            "title": "3. Платежи",
+            "p1": "Оплата услуг производится в криптовалюте через сторонний платёжный шлюз.",
+            "p2": "Мы не обрабатываем и не храним платёжную информацию, такую как кошельки, транзакции или история платежей. Всё это обрабатывается на стороне провайдера, без участия FOGVPN."
+            },
+            "s4": {
+            "title": "4. Логи и активность",
+            "p1": "Мы придерживаемся строгой политики no-logs. Это означает, что мы не ведём журналы подключений, не сохраняем IP-адреса, историю трафика и другие данные о вашей активности.",
+            "p2": "Мы не знаем, какие сайты вы посещаете, и не можем это узнать даже технически."
+            },
+            "s5": {
+            "title": "5. Безопасность и прозрачность",
+            "p1": "Мы используем современные методы защиты серверов и шифрования трафика. Несмотря на это, ни одна система не может быть абсолютно защищена от внешних угроз.",
+            "p2": "Мы постоянно улучшаем инфраструктуру, чтобы обеспечить безопасность и приватность пользователей."
+            },
+            "s6": {
+            "title": "6. Контакты и поддержка",
+            "lead": "Если у вас есть вопросы, предложения или сомнения — наша команда всегда на связи:"
+            },
+            "s7": {
+            "title": "7. Изменения политики",
+            "p1": "Иногда мы можем вносить изменения в этот документ, чтобы сделать его понятнее или учесть обновления в работе сервиса.",
+            "p2": "Новая версия политики вступает в силу сразу после публикации на сайте."
+            }
+        }
     }
   }
   

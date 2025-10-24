@@ -1,14 +1,30 @@
-import { writable } from 'svelte/store';
+import { writable, get } from 'svelte/store';
 import translations from './i18n.json';
 
 export type Lang = 'en' | 'ru';
 
-const current = writable<Lang>('en');
+export const lang = writable<Lang>('en');
 
-const dict: Record<Lang, Record<string, string>> = translations as any;
+type Dict = Record<Lang, Record<string, unknown>>;
+const dict: Dict = translations as Dict;
 
-function t(key: string, lang: Lang = 'en'): string {
-	return dict[lang]?.[key] ?? key;
+function getByPath(obj: unknown, path: string): unknown {
+  if (!obj) return undefined;
+  return path.split('.').reduce<unknown>((acc, part) => {
+    if (acc && typeof acc === 'object' && part in (acc as any)) {
+      return (acc as any)[part];
+    }
+    return undefined;
+  }, obj);
 }
 
-export { current as lang, t };
+export function t(key: string, current?: Lang): string {
+  const currentLang = current ?? get(lang);
+  const fromCurrent = getByPath(dict[currentLang], key);
+  if (typeof fromCurrent === 'string') return fromCurrent;
+
+  const fromEn = getByPath(dict.en, key);
+  if (typeof fromEn === 'string') return fromEn;
+
+  return key;
+}

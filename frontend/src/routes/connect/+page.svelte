@@ -60,6 +60,14 @@
 		showQr = false;
 	}
 
+	function formatTraffic(bytes?: number): string {
+		if (!bytes || bytes <= 0) return '0 MB';
+		const gb = bytes / (1024 ** 3);
+		if (gb >= 1) return gb.toFixed(2) + ' GB';
+		const mb = bytes / (1024 ** 2);
+		return mb.toFixed(1) + ' MB';
+	}
+
 </script>
 
 <svelte:head>
@@ -91,8 +99,11 @@
 						{/if}
 					</span>
 				</span>
-				<!-- <span>{t('limit', currentLang)} <span>{user?.traffic_limit ? (user.traffic_limit / (1024**3)).toFixed(2) + ' GB' : '---'}</span></span>
-				<span>{t('used', currentLang)} <span>{user?.traffic_used ? (user.traffic_used / (1024**3)).toFixed(2) + ' GB' : '---'}</span></span> -->
+				<!-- <span>{t('limit', currentLang)} <span>{user?.traffic_limit ? (user.traffic_limit / (1024**3)).toFixed(2) + ' GB' : '---'}</span></span> -->
+				<span>
+					{t('used', currentLang)}
+					<span>{formatTraffic(user?.traffic_used)}</span>
+				</span>			  
 			  </div>
 			<div class="connect-info__link">
 				<input type="text" id="xray_link" readonly value={subscription_url}/>

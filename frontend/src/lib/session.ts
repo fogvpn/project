@@ -3,6 +3,7 @@ import { subscriptionUrl } from './store';
 
 export interface SessionData {
   subscription?: string;
+  uuid?: string;
   status?: string;
   traffic_used?: number;
   traffic_limit?: number;
